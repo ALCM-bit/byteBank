@@ -18,19 +18,23 @@ namespace ByteBank
             Console.WriteLine(contaDoAndre.agencia);
             Console.WriteLine(contaDoAndre.conta);
             Console.WriteLine(contaDoAndre.saldo);
-            contaDoAndre.Depositar(100);
-            Console.WriteLine($"Saldo pós deposito {contaDoAndre.saldo}");
 
-            if(contaDoAndre.Sacar(300)== true)
-            {
-                Console.WriteLine($"Saldo pós saque {contaDoAndre.saldo}");
+            ContaCorrente contaDaMaria = new ContaCorrente();
+            contaDaMaria.titular = "Maria Souza";
+            contaDaMaria.agencia = 17;
+            contaDaMaria.conta = "1010-5";
+            contaDaMaria.saldo = 350.0;
 
-            }
-            else
-            {
-                Console.WriteLine("Saldo insuficiente para saque");
-            }
-            
+            Console.WriteLine(contaDaMaria.titular);
+            Console.WriteLine(contaDaMaria.agencia);
+            Console.WriteLine(contaDaMaria.conta);
+            Console.WriteLine(contaDaMaria.saldo);
+
+            contaDoAndre.Transferir(50, contaDaMaria);
+
+            Console.WriteLine($"Andre saldo {contaDoAndre.saldo}");
+            Console.WriteLine($"Maria saldo {contaDaMaria.saldo}");
+
         }
     }
 }
