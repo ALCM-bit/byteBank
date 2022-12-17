@@ -40,18 +40,23 @@ namespace ByteBank
             //ContaCorrente contaDoPedro = new ContaCorrente();
             //Console.WriteLine(contaDoPedro.saldo);
 
-            Cliente cliente = new Cliente();
-            cliente.nome = "Andre Silva";
-            cliente.cpf = "123456789";
-            cliente.profissao = "Analista";
+            //Cliente cliente = new Cliente();
+            //cliente.nome = "Andre Silva";
+            //cliente.cpf = "123456789";
+            //cliente.profissao = "Analista";
 
-            ContaCorrente conta = new ContaCorrente();
-            conta.titular = cliente;
-            conta.conta = "1010-X";
-            conta.agencia = 15;
-            conta.saldo = 100;
+            //ContaCorrente conta = new ContaCorrente();
+            //conta.titular = cliente;
+            //conta.conta = "1010-X";
+            //conta.agencia = 15;
+            //conta.saldo = 100;
 
-            Console.WriteLine("Titular = " + conta.titular.nome);
+            //Console.WriteLine("Titular = " + conta.titular.nome);
+
+            ContaCorrente conta3 = new ContaCorrente();
+            conta3.DefinirSaldo(200);
+
+            Console.WriteLine(conta3.ObterSaldo());
         }
     }
 }
