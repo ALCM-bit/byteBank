@@ -10,11 +10,22 @@ namespace ByteBank.Contas
     //Representa a Conta Corrente do mundo real
     public class ContaCorrente
     {
-        public int agencia;
-        public string conta;
+        private int agencia;
+        public int Agencia
+        {
+            get { return agencia; }
+            set
+            {
+                if (value > 0)
+                    this.agencia = value;
+                else
+                    return;
+            }
+        }
+        private string conta;
         private double saldo = 100;
 
-        public Cliente titular;
+        private Cliente titular;
 
         public void Depositar(double valor)
         {

@@ -54,9 +54,9 @@ namespace ByteBank
             //Console.WriteLine("Titular = " + conta.titular.nome);
 
             ContaCorrente conta3 = new ContaCorrente();
-            conta3.DefinirSaldo(200);
+            conta3.SetSaldo(200);
 
-            Console.WriteLine(conta3.ObterSaldo());
+            Console.WriteLine(conta3.GetSaldo());
         }
     }
 }
