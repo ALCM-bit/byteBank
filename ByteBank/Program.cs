@@ -55,8 +55,11 @@ namespace ByteBank
 
             ContaCorrente conta3 = new ContaCorrente();
             conta3.SetSaldo(200);
-
+            conta3.Agencia = 19;
             Console.WriteLine(conta3.GetSaldo());
+            Console.WriteLine(conta3.Agencia);
+            conta3.Conta = "1011-H";
+            Console.WriteLine(conta3.Conta);
         }
     }
 }
