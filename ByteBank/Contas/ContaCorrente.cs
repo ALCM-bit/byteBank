@@ -10,11 +10,12 @@ namespace ByteBank.Contas
     //Representa a Conta Corrente do mundo real
     public class ContaCorrente
     {
+        public static int TotalDeContasCriadas { get; private set;}
         private int agencia;
         public int Agencia
         {
             get { return agencia; }
-            set
+            private set
             {
                 if (value > 0)
                     this.agencia = value;
@@ -81,5 +82,14 @@ namespace ByteBank.Contas
         {
             return this.saldo;
         }
+
+        public ContaCorrente(int agencia, string conta)
+        {
+            this.Agencia = agencia;
+            this.Conta= conta;
+            TotalDeContasCriadas++;
+
+        }
+
     }
 }

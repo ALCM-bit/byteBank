@@ -53,13 +53,27 @@ namespace ByteBank
 
             //Console.WriteLine("Titular = " + conta.titular.nome);
 
-            ContaCorrente conta3 = new ContaCorrente();
-            conta3.SetSaldo(200);
-            conta3.Agencia = 19;
-            Console.WriteLine(conta3.GetSaldo());
-            Console.WriteLine(conta3.Agencia);
-            conta3.Conta = "1011-H";
-            Console.WriteLine(conta3.Conta);
+            //ContaCorrente conta3 = new ContaCorrente();
+            //conta3.SetSaldo(200);
+            //conta3.Agencia = 19;
+            //Console.WriteLine(conta3.GetSaldo());
+            //Console.WriteLine(conta3.Agencia);
+            //conta3.Conta = "1011-H";
+            //Console.WriteLine(conta3.Conta);
+
+            //ContaCorrente conta4 = new ContaCorrente(18, "1010-X");
+            //conta4.SetSaldo(500);
+            //conta4.Titular = new Cliente();
+            //conta4.Titular.Nome = "Felipe";
+
+            //Console.WriteLine(conta4.GetSaldo());
+            //Console.WriteLine(conta4.Agencia);
+            //Console.WriteLine(conta4.Titular.Nome);
+
+            ContaCorrente conta5 = new ContaCorrente(283, "1234-X");
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+            ContaCorrente conta6 = new ContaCorrente(345, "1345-X");
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
         }
     }
 }
