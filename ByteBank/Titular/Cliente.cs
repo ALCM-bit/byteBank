@@ -12,8 +12,11 @@ namespace ByteBank.Titular
         public string Cpf { get; set; }
         public string Profissao { get; set; }
 
+        public static int TotalClientesCadastrados { get; private set; }
+
         public Cliente() 
         {
+            TotalClientesCadastrados++;
             
         }
     }

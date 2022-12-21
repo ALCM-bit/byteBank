@@ -91,5 +91,13 @@ namespace ByteBank.Contas
 
         }
 
+        public ContaCorrente(Cliente titular, string conta, int agencia)
+        {
+            Titular = titular;
+            Conta = conta;
+            Agencia = agencia;
+
+        }
+
     }
 }
