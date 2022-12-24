@@ -7,22 +7,19 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios
 {
-    public class Diretor : Autenticavel
+    public class GerenteDeContas : Autenticavel
     {
-
+        public GerenteDeContas(string cpf) : base(cpf, 4000)
+        {
+        }
         public override double GetBonificacao()
         {
-            return Salario * 0.5;
-        }
-
-        public Diretor(string cpf) : base(cpf, 5000)
-        {
-            //Console.WriteLine("Criando um diretor.");
+            return Salario * 0.25;
         }
 
         public override void AumentarSalario()
         {
-            Salario *= 1.15;
+            Salario *= 1.05;
         }
 
         public override bool Autenticar(string senha)
@@ -30,6 +27,4 @@ namespace ByteBank.Funcionarios
             return this.Senha == senha;
         }
     }
-
-
 }
